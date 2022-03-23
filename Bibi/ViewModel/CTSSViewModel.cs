@@ -46,5 +46,9 @@ namespace Bibi.ViewModel
             ObservableCollection<CTSSModel> result = ValueList;
             Services.PDF.CTSSPdf pdf = new Services.PDF.CTSSPdf(ref result, "CTSS");
         }
+        public void CreatePDF()
+        {
+            Services.PDF.CTSSPdf.CreatePDF("CTSS", "CTSS38");
+        }
     }
 }

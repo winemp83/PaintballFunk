@@ -12,13 +12,14 @@ namespace TestApp
     {
         static void Main(string[] args)
         {
-            CTSSViewModel vm = new CTSSViewModel();
-            foreach(CTSSModel model in vm.ValueList)
+            PMR466ViewModel vm = new PMR466ViewModel();
+            foreach(PMR466Model model in vm.ValueList)
             {
                 Console.WriteLine(model.ToString());
             }
-            vm.CreatePDFCTSS();
-            vm.CreatePDFCTSS38();
+            //vm.CreatePDFCTSS();
+            //vm.CreatePDFCTSS38();
+            vm.CreatePDF();
             Console.ReadLine();
         }
     }

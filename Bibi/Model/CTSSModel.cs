@@ -3,7 +3,7 @@
     public class CTSSModel : BaseModel
     {
         private string _Ton; // Ton in Hz
-        private string _SC; //StandartChannel
+        private string _SC; // Standart Channel
 
         public string Ton
         {

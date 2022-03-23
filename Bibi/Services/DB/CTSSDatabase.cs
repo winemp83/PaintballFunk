@@ -10,7 +10,7 @@ namespace Bibi.Services.DB
     {
         public override void Add(CTSSModel value)
         {
-            const string query = "INSERT INTO CTSS(Ton, StandartChannel VALUES(@ton, @standartChannel)";
+            const string query = "INSERT INTO CTSS(Ton, StandartChannel) VALUES(@ton, @standartChannel)";
             Args = new Dictionary<string, object>
             {
                 {"@ton", value.Ton },

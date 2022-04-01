@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using Bibi.Model;
 using iText.IO.Font.Constants;
 using iText.Kernel.Colors;
 using iText.Kernel.Font;
 using iText.Kernel.Geom;
 using iText.Kernel.Pdf;
-using iText.Kernel.Utils;
 using iText.Layout;
 using iText.Layout.Element;
 using iText.Layout.Properties;
@@ -15,7 +13,7 @@ namespace Bibi.Services.PDF
 {
     public class PMR466Pdf : PdfBase<PMR466Model>
     {
-        static private Color lightgrey = new DeviceCmyk(0, 0, 0, 0.20f);
+        private static readonly Color lightgrey = new DeviceCmyk(0, 0, 0, 0.20f);
 
         public PMR466Pdf(ref ObservableCollection<PMR466Model> value, string fileName)
         {

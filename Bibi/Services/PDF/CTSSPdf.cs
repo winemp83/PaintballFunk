@@ -15,8 +15,8 @@ namespace Bibi.Services.PDF
 {
     public class CTSSPdf : PdfBase<Model.CTSSModel>
     {
-        static private Color lightgrey = new DeviceCmyk(0, 0, 0, 0.20f);
-        static private Color lightred = new DeviceCmyk(0, 0.58f, 0.41f, 0);
+        private static readonly Color lightgrey = new DeviceCmyk(0, 0, 0, 0.20f);
+        private static readonly Color lightred = new DeviceCmyk(0, 0.58f, 0.41f, 0);
 
         public CTSSPdf(ref ObservableCollection<CTSSModel> value, string fileName)
         {

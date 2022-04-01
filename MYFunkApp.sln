@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bibi", "Bibi\Bibi.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{1103C855-0E10-4E45-8582-4B0BFFC3C01F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunkApp", "FunkApp\FunkApp.csproj", "{B2D00405-F82F-48FB-A6BF-FC93478224C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{1103C855-0E10-4E45-8582-4B0BFFC3C01F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1103C855-0E10-4E45-8582-4B0BFFC3C01F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1103C855-0E10-4E45-8582-4B0BFFC3C01F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2D00405-F82F-48FB-A6BF-FC93478224C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2D00405-F82F-48FB-A6BF-FC93478224C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2D00405-F82F-48FB-A6BF-FC93478224C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2D00405-F82F-48FB-A6BF-FC93478224C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -3,10 +3,12 @@ using System.Collections.ObjectModel;
 using Bibi.Services.DB;
 using System.Collections.Generic;
 using Bibi.Services;
+using IBibi.IViewModel;
+using IBibi.IModel;
 
 namespace Bibi.ViewModel
 {
-    public class CTSSViewModel : BaseViewModel<CTSSModel>
+    public class CTSSViewModel : IBaseViewModel<CTSSModel>
     {
         private readonly CTSSDatabase _db;
         private CTSSModel _Value;

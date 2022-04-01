@@ -1,4 +1,6 @@
-﻿namespace Bibi.Model
+﻿using IBibi.IModel;
+
+namespace Bibi.Model
 {
     public class CTSSModel : BaseModel
     {

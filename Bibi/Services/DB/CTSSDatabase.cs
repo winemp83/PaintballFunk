@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data;
 using Bibi.Model;
+using IBibi.IServices.IDB;
 
 namespace Bibi.Services.DB
 {
-    public class CTSSDatabase : BaseDatabase<CTSSModel>
+    public class CTSSDatabase : BaseDatabase<CTSSModel>, IBaseDatabase<CTSSModel>
     {
-        public override void Add(CTSSModel value)
+        public void Add(CTSSModel value)
         {
             const string query = "INSERT INTO CTSS(Ton, StandartChannel) VALUES(@ton, @standartChannel)";
             Args = new Dictionary<string, object>
@@ -20,7 +21,7 @@ namespace Bibi.Services.DB
             Args.Clear();
         }
 
-        public override void Delete(CTSSModel value)
+        public void Delete(CTSSModel value)
         {
             const string query = "DELETE from CTSS WHERE ID =@id";
             Args = new Dictionary<string, object>
@@ -31,7 +32,7 @@ namespace Bibi.Services.DB
             Args.Clear();
         }
 
-        public override CTSSModel Get(string key)
+        public CTSSModel Get(string key)
         {
             const string query = "SELECT * FROM CTSS WHERE ID = @id";
             Args = new Dictionary<string, object>
@@ -54,7 +55,7 @@ namespace Bibi.Services.DB
             return model;
         }
 
-        public override ObservableCollection<CTSSModel> Get()
+        public ObservableCollection<CTSSModel> Get()
         {
             const string query = "SELECT * FROM CTSS";
             DataTable dt = Execute(query);
@@ -75,7 +76,7 @@ namespace Bibi.Services.DB
             return result;
         }
 
-        public override void Update(CTSSModel value)
+        public void Update(CTSSModel value)
         {
             const string query = "UPDATE CTSS SET Ton = @ton, StandartChannel = @standartChannel WHERE ID = @id";
             Args = new Dictionary<string, object>

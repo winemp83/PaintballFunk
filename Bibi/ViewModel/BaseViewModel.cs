@@ -1,13 +1,14 @@
-﻿using System.Collections.ObjectModel;
+﻿using IBibi.IViewModel;
+using System.Collections.ObjectModel;
 
 namespace Bibi.ViewModel
 {
-    public abstract class BaseViewModel
+    public abstract class BaseViewModel: IBaseViewModel
     {
         public abstract void Load();
     }
 
-    public abstract class BaseViewModel<T> : BaseViewModel
+    public abstract class IBaseViewModel<T> : BaseViewModel, IBibi.IViewModel.IBaseViewModel<T>
     {
         private ObservableCollection<T> _ValueList;
 

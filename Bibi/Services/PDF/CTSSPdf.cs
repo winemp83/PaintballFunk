@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using Bibi.Model;
+using IBibi.IServices.IPDF;
 using iText.IO.Font.Constants;
 using iText.Kernel.Colors;
 using iText.Kernel.Font;
@@ -13,7 +14,7 @@ using iText.Layout.Properties;
 
 namespace Bibi.Services.PDF
 {
-    public class CTSSPdf : PdfBase<Model.CTSSModel>
+    public class CTSSPdf : PdfBase, IPdfBase<CTSSModel>
     {
         private static readonly Color lightgrey = new DeviceCmyk(0, 0, 0, 0.20f);
         private static readonly Color lightred = new DeviceCmyk(0, 0.58f, 0.41f, 0);
@@ -26,13 +27,13 @@ namespace Bibi.Services.PDF
             Doc.SetMargins(20, 20, 20, 20);
             Table table = new Table(new float[] {1, 1 , 1});
             table.SetWidth(UnitValue.CreatePercentValue(100));
-            CTSSPdf.Process(table,value);
+            this.Process(table,value);
             Doc.Add(new Paragraph("CTSS Tabelle").SetVerticalAlignment(VerticalAlignment.MIDDLE).SetHorizontalAlignment(HorizontalAlignment.CENTER));
             Doc.Add(table);
             Doc.Close();
         }
 
-        private static new void Process(Table table,ObservableCollection<CTSSModel> value)
+        public void Process(Table table,ObservableCollection<CTSSModel> value)
         {
             Color bg;
             PdfFont font = PdfFontFactory.CreateFont(StandardFonts.COURIER);

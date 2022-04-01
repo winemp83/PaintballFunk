@@ -1,5 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using Bibi.Model;
+using IBibi.IServices.IPDF;
 using iText.IO.Font.Constants;
 using iText.Kernel.Colors;
 using iText.Kernel.Font;
@@ -11,7 +12,7 @@ using iText.Layout.Properties;
 
 namespace Bibi.Services.PDF
 {
-    public class PMR466Pdf : PdfBase<PMR466Model>
+    public class PMR466Pdf : PdfBase, IPdfBase<PMR466Model>
     {
         private static readonly Color lightgrey = new DeviceCmyk(0, 0, 0, 0.20f);
 
@@ -23,13 +24,13 @@ namespace Bibi.Services.PDF
             Doc.SetMargins(20, 20, 20, 20);
             Table table = new Table(new float[] { 1, 1, 1 });
             table.SetWidth(UnitValue.CreatePercentValue(100));
-            PMR466Pdf.Process(table, value);
+            this.Process(table, value);
             Doc.Add(new Paragraph("PMR466 Tabelle").SetVerticalAlignment(VerticalAlignment.MIDDLE).SetHorizontalAlignment(HorizontalAlignment.CENTER));
             Doc.Add(table);
             Doc.Close();
         }
 
-        private static new void Process(Table table, ObservableCollection<PMR466Model> value)
+        public void Process(Table table, ObservableCollection<PMR466Model> value)
         {
             Color bg;
             PdfFont font = PdfFontFactory.CreateFont(StandardFonts.COURIER);

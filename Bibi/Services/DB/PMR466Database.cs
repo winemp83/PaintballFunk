@@ -1,4 +1,5 @@
 ﻿using Bibi.Model;
+using IBibi.IServices.IDB;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -6,9 +7,9 @@ using System.Data;
 
 namespace Bibi.Services.DB
 {
-    public class PMR466Database : BaseDatabase<PMR466Model>
+    public class PMR466Database : BaseDatabase<PMR466Model>, IBaseDatabase<PMR466Model>
     {
-        public override void Add(PMR466Model value)
+        public void Add(PMR466Model value)
         {
             const string query = "INSERT INTO PMR466(Frequenz, Anmerkung) VALUES(@frequenz, @anmerkung)";
             Args = new Dictionary<string, object>
@@ -20,7 +21,7 @@ namespace Bibi.Services.DB
             Args.Clear();
         }
 
-        public override void Delete(PMR466Model value)
+        public void Delete(PMR466Model value)
         {
             const string query = "DELETE from PMR466 WHERE ID =@id";
             Args = new Dictionary<string, object>
@@ -31,7 +32,7 @@ namespace Bibi.Services.DB
             Args.Clear();
         }
 
-        public override PMR466Model Get(string key)
+        public PMR466Model Get(string key)
         {
             const string query = "SELECT * FROM PMR466 WHERE ID = @id";
             Args = new Dictionary<string, object>
@@ -54,7 +55,7 @@ namespace Bibi.Services.DB
             return model;
         }
 
-        public override ObservableCollection<PMR466Model> Get()
+        public ObservableCollection<PMR466Model> Get()
         {
             const string query = "SELECT * FROM PMR466";
             DataTable dt = Execute(query);
@@ -76,7 +77,7 @@ namespace Bibi.Services.DB
             return result;
         }
 
-        public override void Update(PMR466Model value)
+        public void Update(PMR466Model value)
         {
             const string query = "UPDATE PMR466 SET Frequenz = @frequenz, Anmerkung = @anmerkung WHERE ID = @id";
             Args = new Dictionary<string, object>

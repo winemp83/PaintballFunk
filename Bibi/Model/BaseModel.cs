@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel;
-
+using IBibi.IModel;
 namespace Bibi.Model
 {
-    public class BaseModel : INotifyPropertyChanged
+    public class BaseModel : IBaseModel
     {
         private string _Id;
 

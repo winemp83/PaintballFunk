@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IBibi.IServices.IDB;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data;
@@ -6,7 +7,7 @@ using System.Data.SQLite;
 
 namespace Bibi.Services.DB
 {
-    public abstract class BaseDatabase
+    public abstract class BaseDatabase : IBaseDatabase
     {
         public Dictionary<string, object> Args { get; set; }
         public string DBName { get; set; }
@@ -70,10 +71,5 @@ namespace Bibi.Services.DB
     public abstract class BaseDatabase<T> : BaseDatabase
     {
 
-        public abstract void Add(T value);
-        public abstract void Delete(T value);
-        public abstract T Get(string key);
-        public abstract ObservableCollection<T> Get();
-        public abstract void Update(T value);
     }
 }

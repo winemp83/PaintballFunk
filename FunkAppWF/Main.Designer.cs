@@ -34,13 +34,14 @@
             this.dGV = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mainToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.suchenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.beendenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.suchenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cTSSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cTSS38ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pMR466ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dGVPMR = new System.Windows.Forms.DataGridView();
+            this.nachNummerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nachFrequenzToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gB = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.rTBPAn = new System.Windows.Forms.RichTextBox();
@@ -54,12 +55,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tBPID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGV)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dGVPMR)).BeginInit();
             this.gB.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,9 +66,9 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.tSSL});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 428);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 420);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(996, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(629, 22);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -112,7 +110,7 @@
             this.infoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(996, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(629, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -124,6 +122,13 @@
             this.mainToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
             this.mainToolStripMenuItem.Text = "Main";
             // 
+            // beendenToolStripMenuItem
+            // 
+            this.beendenToolStripMenuItem.Name = "beendenToolStripMenuItem";
+            this.beendenToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.beendenToolStripMenuItem.Text = "Beenden";
+            this.beendenToolStripMenuItem.Click += new System.EventHandler(this.beendenToolStripMenuItem_Click);
+            // 
             // suchenToolStripMenuItem
             // 
             this.suchenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -133,19 +138,6 @@
             this.suchenToolStripMenuItem.Name = "suchenToolStripMenuItem";
             this.suchenToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this.suchenToolStripMenuItem.Text = "Suchen";
-            // 
-            // infoToolStripMenuItem
-            // 
-            this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
-            this.infoToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
-            this.infoToolStripMenuItem.Text = "Info";
-            // 
-            // beendenToolStripMenuItem
-            // 
-            this.beendenToolStripMenuItem.Name = "beendenToolStripMenuItem";
-            this.beendenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.beendenToolStripMenuItem.Text = "Beenden";
-            this.beendenToolStripMenuItem.Click += new System.EventHandler(this.beendenToolStripMenuItem_Click);
             // 
             // cTSSToolStripMenuItem
             // 
@@ -163,31 +155,35 @@
             // 
             // pMR466ToolStripMenuItem
             // 
+            this.pMR466ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nachNummerToolStripMenuItem,
+            this.nachFrequenzToolStripMenuItem});
             this.pMR466ToolStripMenuItem.Name = "pMR466ToolStripMenuItem";
             this.pMR466ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pMR466ToolStripMenuItem.Text = "PMR466";
-            this.pMR466ToolStripMenuItem.Click += new System.EventHandler(this.pMR466ToolStripMenuItem_Click);
             // 
-            // dGVPMR
+            // nachNummerToolStripMenuItem
             // 
-            this.dGVPMR.AllowUserToAddRows = false;
-            this.dGVPMR.AllowUserToDeleteRows = false;
-            this.dGVPMR.AllowUserToResizeColumns = false;
-            this.dGVPMR.AllowUserToResizeRows = false;
-            this.dGVPMR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGVPMR.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dGVPMR.Location = new System.Drawing.Point(220, 28);
-            this.dGVPMR.MultiSelect = false;
-            this.dGVPMR.Name = "dGVPMR";
-            this.dGVPMR.ReadOnly = true;
-            this.dGVPMR.Size = new System.Drawing.Size(350, 397);
-            this.dGVPMR.TabIndex = 3;
-            this.dGVPMR.SelectionChanged += new System.EventHandler(this.dGVPMR_SelectionChanged);
+            this.nachNummerToolStripMenuItem.Name = "nachNummerToolStripMenuItem";
+            this.nachNummerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nachNummerToolStripMenuItem.Text = "Nach Nummer";
+            this.nachNummerToolStripMenuItem.Click += new System.EventHandler(this.nachNummerToolStripMenuItem_Click);
+            // 
+            // nachFrequenzToolStripMenuItem
+            // 
+            this.nachFrequenzToolStripMenuItem.Name = "nachFrequenzToolStripMenuItem";
+            this.nachFrequenzToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nachFrequenzToolStripMenuItem.Text = "Nach Frequenz";
+            this.nachFrequenzToolStripMenuItem.Click += new System.EventHandler(this.nachFrequenzToolStripMenuItem_Click);
+            // 
+            // infoToolStripMenuItem
+            // 
+            this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
+            this.infoToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
+            this.infoToolStripMenuItem.Text = "Info";
             // 
             // gB
             // 
-            this.gB.Controls.Add(this.button2);
-            this.gB.Controls.Add(this.button1);
             this.gB.Controls.Add(this.label6);
             this.gB.Controls.Add(this.rTBPAn);
             this.gB.Controls.Add(this.tBCTon);
@@ -200,7 +196,7 @@
             this.gB.Controls.Add(this.label2);
             this.gB.Controls.Add(this.tBPID);
             this.gB.Controls.Add(this.label1);
-            this.gB.Location = new System.Drawing.Point(584, 27);
+            this.gB.Location = new System.Drawing.Point(219, 27);
             this.gB.Name = "gB";
             this.gB.Size = new System.Drawing.Size(400, 397);
             this.gB.TabIndex = 4;
@@ -305,43 +301,30 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "Channel : ";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(9, 368);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 28;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(319, 368);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 29;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(996, 450);
+            this.ClientSize = new System.Drawing.Size(629, 442);
+            this.ControlBox = false;
             this.Controls.Add(this.gB);
-            this.Controls.Add(this.dGVPMR);
             this.Controls.Add(this.dGV);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
+            this.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Main";
-            this.Text = "Form1";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "FunkApp";
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGV)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dGVPMR)).EndInit();
             this.gB.ResumeLayout(false);
             this.gB.PerformLayout();
             this.ResumeLayout(false);
@@ -363,7 +346,6 @@
         private System.Windows.Forms.ToolStripMenuItem cTSS38ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pMR466ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem infoToolStripMenuItem;
-        private System.Windows.Forms.DataGridView dGVPMR;
         private System.Windows.Forms.GroupBox gB;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.RichTextBox rTBPAn;
@@ -377,8 +359,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tBPID;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripMenuItem nachNummerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nachFrequenzToolStripMenuItem;
     }
 }
 

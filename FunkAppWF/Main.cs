@@ -17,7 +17,7 @@ namespace FunkAppWF
     {
 
         private readonly CTSSViewModel _CTSS;
-        private readonly PMR466ViewModel _PMR;
+        private PMR466ViewModel _PMR;
 
         public Main()
         {
@@ -29,9 +29,6 @@ namespace FunkAppWF
             dGV.Columns["ID"].DisplayIndex = 0;
             dGV.Columns["Ton"].DisplayIndex = 1;
             dGV.Columns["SC"].DisplayIndex = 2;
-            dGVPMR.DataSource = _PMR.ValueList;
-            dGVPMR.Columns["ID"].DisplayIndex = 0;
-            dGVPMR.Columns["Frequenz"].DisplayIndex= 1;
         }
 
         private void cTSS38ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -64,18 +61,7 @@ namespace FunkAppWF
             }
         }
 
-        private void dGVPMR_SelectionChanged(object sender, EventArgs e)
-        {
-            gB.Visible = true;
-            if(dGVPMR.SelectedRows.Count > 0 && dGVPMR.SelectedRows[0].Cells.Count > 0)
-            {
-                tBPID.Text = dGVPMR.SelectedRows[0].Cells[2].Value.ToString();
-                tBPFreq.Text = dGVPMR.SelectedRows[0].Cells[0].Value.ToString();
-                rTBPAn.Text = dGVPMR.SelectedRows[0].Cells[1].Value.ToString();
-            }
-        }
-
-        private void pMR466ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void nachNummerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string _channel = "0";
             if (Customs.InputBox("PMR466 Suche", "Channel Nummer : ", ref _channel) == DialogResult.OK)
@@ -88,6 +74,21 @@ namespace FunkAppWF
                     rTBPAn.Text = pm.Anmerkung;
                 }
             }
+        }
+
+        private void nachFrequenzToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PMRSelection _sec = new PMRSelection("PMR466 Suche", "Channel Frequenz : ", ref _PMR);
+            if (_sec.ShowDialog() == DialogResult.OK)
+            {
+                foreach (PMR466Model pm in _PMR.ValueList.Where(c => c.Frequenz.Equals(_sec.result.Value.Frequenz)))
+                {
+                    tBPID.Text = pm.ID;
+                    tBPFreq.Text = pm.Frequenz;
+                    rTBPAn.Text = pm.Anmerkung;
+                }
+            }
+            _sec.Close();
         }
     }
 }

@@ -19,7 +19,7 @@ namespace Bibi.ViewModel
             set
             {
                 _Value = value;
-                DeleteCommand.RaiseCanExecuteChanged();
+                //DeleteCommand.RaiseCanExecuteChanged();
             }
         }
 

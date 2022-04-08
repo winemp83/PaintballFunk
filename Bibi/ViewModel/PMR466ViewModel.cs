@@ -19,7 +19,7 @@ namespace Bibi.ViewModel
             set
             {
                 _Value = value;
-                DeleteCommand.RaiseCanExecuteChanged();
+                //DeleteCommand.RaiseCanExecuteChanged();
             }
         }
 
@@ -35,7 +35,7 @@ namespace Bibi.ViewModel
         }
         public override void Load()
         {
-            Value = null;
+            Value = new PMR466Model();
             ValueList = new ObservableCollection<PMR466Model>();
             ValueList = _db.Get();
         }

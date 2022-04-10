@@ -1,50 +1,39 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections.ObjectModel;
 using System.Windows.Forms;
 
 namespace FunkAppWF
 {
-    public partial class PMRSelection : Form
+    public partial class PMRSelection<T> : Form
     {
-        public Bibi.ViewModel.PMR466ViewModel result;
+        public T result;
+        public ObservableCollection<T> items;
 
-        public PMRSelection()
+        public PMRSelection(string Title, string Question,string DisplayedMember, ref ObservableCollection<T> list)
         {
-            InitializeComponent();
-        }
-
-        public PMRSelection(string Title, string Question, ref Bibi.ViewModel.PMR466ViewModel list)
-        {
-            InitializeComponent();
-            result = new Bibi.ViewModel.PMR466ViewModel();
-            result = list;
-            this.Text = Title;
-            this.LQuestion.Text = Question;
-            this.LBSelection.DataSource = result.ValueList;
-            this.LBSelection.DisplayMember = "Frequenz";
+            items = list;
+            InitializeComponent(); 
+            Text = Title;
+            LQuestion.Text = Question;
+            LBSelection.DataSource = list;
+            LBSelection.DisplayMember = DisplayedMember;
         }
 
         private void CmdOk_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
-            this.Hide();
+            Hide();
         }
 
         private void CmdCancel_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
-            this.Hide();
+            Hide();
         }
 
         private void LBSelection_SelectedIndexChanged(object sender, EventArgs e)
         {
-            result.Value = result.ValueList[LBSelection.SelectedIndex];
+            result = items[LBSelection.SelectedIndex];
         }
     }
 }

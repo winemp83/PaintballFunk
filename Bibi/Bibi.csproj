@@ -138,10 +138,12 @@
   <ItemGroup>
     <Compile Include="Model\BaseModel.cs" />
     <Compile Include="Model\CTSSModel.cs" />
+    <Compile Include="Model\FavModel.cs" />
     <Compile Include="Model\PMR466Model.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\DB\BaseDatabase.cs" />
     <Compile Include="Services\DB\CTSSDatabase.cs" />
+    <Compile Include="Services\DB\FavDatabase.cs" />
     <Compile Include="Services\DB\PMR466Database.cs" />
     <Compile Include="Services\MyICommand.cs" />
     <Compile Include="Services\PDF\CTSSPdf.cs" />
@@ -149,6 +151,7 @@
     <Compile Include="Services\PDF\PMR466Pdf.cs" />
     <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="ViewModel\CTSSViewModel.cs" />
+    <Compile Include="ViewModel\FavViewModel.cs" />
     <Compile Include="ViewModel\PMR466ViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

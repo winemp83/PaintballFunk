@@ -8,7 +8,7 @@ using IBibi.IModel;
 
 namespace Bibi.ViewModel
 {
-    public class CTSSViewModel : IBaseViewModel<CTSSModel>
+    public class CTSSViewModel : BaseViewModel<CTSSModel>
     {
         private readonly CTSSDatabase _db;
         private CTSSModel _Value;

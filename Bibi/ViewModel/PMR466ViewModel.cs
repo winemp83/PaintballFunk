@@ -6,7 +6,7 @@ using System.Collections.ObjectModel;
 
 namespace Bibi.ViewModel
 {
-    public class PMR466ViewModel : IBaseViewModel<PMR466Model>
+    public class PMR466ViewModel : BaseViewModel<PMR466Model>
     {
         private readonly PMR466Database _db;
         private PMR466Model _Value;

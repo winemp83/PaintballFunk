@@ -1,6 +1,6 @@
 ﻿namespace FunkAppWF
 {
-    partial class PMRSelection
+    partial class PMRSelection<T>
     {
         /// <summary>
         /// Required designer variable.
@@ -36,7 +36,7 @@
             // 
             // CmdOk
             // 
-            this.CmdOk.Location = new System.Drawing.Point(13, 126);
+            this.CmdOk.Location = new System.Drawing.Point(12, 110);
             this.CmdOk.Name = "CmdOk";
             this.CmdOk.Size = new System.Drawing.Size(75, 23);
             this.CmdOk.TabIndex = 0;
@@ -47,7 +47,7 @@
             // CmdCancel
             // 
             this.CmdCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.CmdCancel.Location = new System.Drawing.Point(197, 126);
+            this.CmdCancel.Location = new System.Drawing.Point(181, 110);
             this.CmdCancel.Name = "CmdCancel";
             this.CmdCancel.Size = new System.Drawing.Size(75, 23);
             this.CmdCancel.TabIndex = 1;
@@ -58,7 +58,7 @@
             // LQuestion
             // 
             this.LQuestion.AutoSize = true;
-            this.LQuestion.Location = new System.Drawing.Point(12, 22);
+            this.LQuestion.Location = new System.Drawing.Point(12, 9);
             this.LQuestion.Name = "LQuestion";
             this.LQuestion.Size = new System.Drawing.Size(35, 13);
             this.LQuestion.TabIndex = 2;
@@ -67,9 +67,9 @@
             // LBSelection
             // 
             this.LBSelection.FormattingEnabled = true;
-            this.LBSelection.Location = new System.Drawing.Point(15, 55);
+            this.LBSelection.Location = new System.Drawing.Point(12, 25);
             this.LBSelection.Name = "LBSelection";
-            this.LBSelection.Size = new System.Drawing.Size(257, 17);
+            this.LBSelection.Size = new System.Drawing.Size(241, 30);
             this.LBSelection.TabIndex = 3;
             this.LBSelection.SelectedIndexChanged += new System.EventHandler(this.LBSelection_SelectedIndexChanged);
             // 
@@ -77,7 +77,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(280, 157);
+            this.ClientSize = new System.Drawing.Size(268, 145);
             this.ControlBox = false;
             this.Controls.Add(this.LBSelection);
             this.Controls.Add(this.LQuestion);

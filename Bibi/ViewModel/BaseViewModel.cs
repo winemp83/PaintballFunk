@@ -8,7 +8,7 @@ namespace Bibi.ViewModel
         public abstract void Load();
     }
 
-    public abstract class BaseViewModel<T> : BaseViewModel, IBibi.IViewModel.IBaseViewModel<T>
+    public abstract class BaseViewModel<T> : BaseViewModel, IBaseViewModel<T>
     {
         private ObservableCollection<T> _ValueList;
 

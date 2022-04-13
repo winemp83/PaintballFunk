@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IBibi", "IBibi\IBibi.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunkAppWF", "FunkAppWF\FunkAppWF.csproj", "{F852FDDF-4381-4F93-915F-89F5D727F83B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EngineWPF", "EngineWPF\EngineWPF.csproj", "{E25094FE-3470-49A8-BB21-11036DD8630F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWPF", "TestWPF\TestWPF.csproj", "{4056B9D9-FDEC-459F-A0E5-6AFB48E752CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{F852FDDF-4381-4F93-915F-89F5D727F83B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F852FDDF-4381-4F93-915F-89F5D727F83B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F852FDDF-4381-4F93-915F-89F5D727F83B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E25094FE-3470-49A8-BB21-11036DD8630F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E25094FE-3470-49A8-BB21-11036DD8630F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E25094FE-3470-49A8-BB21-11036DD8630F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E25094FE-3470-49A8-BB21-11036DD8630F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4056B9D9-FDEC-459F-A0E5-6AFB48E752CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4056B9D9-FDEC-459F-A0E5-6AFB48E752CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4056B9D9-FDEC-459F-A0E5-6AFB48E752CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4056B9D9-FDEC-459F-A0E5-6AFB48E752CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
